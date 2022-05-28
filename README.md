@@ -1,11 +1,11 @@
 # arabic-ocr-tesseract
 simple arabic char recognition
 
-prototype1: 
+prototype_1: 
 uses light version of tesseract based on vanilla javascript
 #Doesn t need anything to run (any basic web browser)
 
-prototype2:
+prototype_2:
 uses the full fledged version on a windows pc posing as a server  
 receives user uploaded images 
 has powershell script that detects images and converts them to text files

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en' class='notranslate' translate='no'>
+  <head>
+      <meta name='google' content='notranslate' />
+      <meta charset='UTF-8'>
+
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' />
+      <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />  
+      <meta http-equiv='Content-Language' content='en' />
+      <title>Dex</title>
+
+      <link href='css/bootstrap-4.5.2.min.css' rel='stylesheet' type='text/css' />
+      <link href='css/offcanvas.css' rel='stylesheet' type='text/css' />
+      <link href='css/main.css' rel='stylesheet' type='text/css' />
+  </head>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  
+  
+  
+  
+  
+<body>
+    <div class='container-fluid'>
+   
+		
+	  
+          <div class='col-sm-10 col-15'>
+            <div class="card rounded-0">
+              <div class="card-header p-1"> 🠉 <strong>Upload File Content</strong>
+              </div> 
+              <div id='uploadFileContentCard' class="card-body p-2">
+                  <div class='row'> 
+                    <div class='col-4 mr-0'>
+                      <p class='w-100'><button id='uploadImgBtn' type='button' class='btn btn-sm btn-outline-primary rounded-0'><small>📂 Select Image…</small><input id='uploadImg' type='file' accept='image/*' /></button></p>
+                      <hr>
+                      <div id='img-preview' class='small border text-center'></div>
+                      <small><strong>Progres</strong></small>
+                      <div class="progress">
+                        <div id="ocrImgProgress" class="progress-bar progress-bar-striped progress-bar-animated"></div>
+                      </div>
+                      <small id='ocrImgProgressStatus' class='small'></small>
+                    </div>
+                    <div class='col-5 mr-0'>
+                      <p class='w-100'><button id='uploadPDFBtn' type='button' class='btn btn-sm btn-outline-primary rounded-0'><small>📂 Select PDF…</small><input id='uploadPDF' type='file' accept='.pdf,.PDF' /></button> <span id='pageLoadingSignal'><span class="spinner-border spinner-border-sm"></span>&nbsp;<small class='text-muted'>Processing Page <span id='currentPageNo'>?</span><b>&nbsp;/&nbsp;<span id="totalPages">?</span>&nbsp;</b></small></span></p>
+                      <hr>
+                      <div id='page-preview' class='small border text-center'></div>
+                      <small><strong>Progres</strong></small>
+                      <div class="progress">
+                        <div id="ocrPageProgress" class="progress-bar progress-bar-striped progress-bar-animated"></div>
+                      </div>
+                      <small id='ocrPageProgressStatus' class='small'></small>
+                    </div>
+                    <div class='col-3 mr-0'>
+                      <small class='text-dark'>📄 Processed Page(s)</small>
+                      <small id='processedPages' class='border small'></small>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+		
+		
+		
+		
+		
+        <hr>
+        <div class='row'>
+          <div class='col-12'>
+            <div id='controllerCard' class="card rounded-0">
+              <div class="card-header p-1">
+                  <p class='m-0'> <button id='clearTextBtn' class="btn btn-sm btn-light text-danger border-danger rounded-0 ml-2 mr-2" type='button'> clear </button>
+				  <span class='float-right'>
+				  <button id='downloadTextContent' class="btn btn-sm btn-light text-primary border-primary rounded-0 pl-2 pr-2 pt-0 pb-1 ml-4" type='button'><small> 🠋 ᴇxᴘᴏʀᴛ ᴀs ᴛᴇxᴛ</small></button></span></p>
+              </div>
+			  
+              <div class="card-body p-0">
+                <textarea id='inputText' class="form-control rounded-0 m-0 border-0"></textarea>
+              </div>
+			  
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src='js/polyfill.js'></script>
+    <script src='js/ie10-viewport-bug-workaround.js'></script>
+    <script src='js/bootstrap-native-v4.js'></script>
+    <script src='js/tesseract/tesseract.min.js'></script>
+    <script src='js/pdf/pdf.min.js'></script>
+    <script src='js/articulate.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+</html>
